@@ -1,0 +1,26 @@
+{
+  "name": "electron-serve-quick-start",
+  "version": "1.0.0",
+  "description": "A minimal Electron-serve application",
+  "main": "main.js",
+  "scripts": {
+    "start": "./node_modules/.bin/electron .",
+    "build": "electron-packager ./ elq --no-prune --overwrite"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "electron",
+    "electron-serve",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "benitogf",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "~1.7.12",
+    "electron-packager": "^10.1.2",
+    "electron-serve": "^0.1.0"
+  }
+}
