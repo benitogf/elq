@@ -1,4 +1,5 @@
 node_modules
 dist/*
 elq-win32-x64
+elq-linux-x64
 !dist/.gitkeep
