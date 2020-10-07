@@ -1,9 +1,25 @@
 const { app, BrowserWindow } = require('electron');
 const serve = require('electron-serve');
 
-const loadURL = serve({directory: 'dist'});
+const loadURL = serve({ directory: 'dist' });
 
-app.on('ready', () => {
-	mainWindow = new BrowserWindow();
-	loadURL(mainWindow);
-});
+let mainWindow;
+
+(async () => {
+	await app.whenReady();
+
+	mainWindow = new BrowserWindow({
+		webPreferences: {
+			nodeIntegration: true,
+			webSecurity: false,
+		},
+		fullscreen: true
+	});
+	mainWindow.setMenuBarVisibility(false)
+
+	await loadURL(mainWindow);
+
+	// The above is equivalent to this:
+	// await mainWindow.loadURL('app://-');
+	// The `-` is just the required hostname
+})();
