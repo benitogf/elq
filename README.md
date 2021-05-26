@@ -13,9 +13,9 @@ To clone and run this repository you'll need [Git](https://git-scm.com) and [Nod
 
 ```bash
 # Clone this repository
-git clone https://github.com/electron/electron-serve-quick-start
+git clone https://github.com/benitogf/elq
 # Go into the repository
-cd electron-serve-quick-start
+cd elq
 # Install dependencies
 npm install
 
