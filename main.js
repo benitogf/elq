@@ -1,7 +1,19 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron');
+
 const serve = require('electron-serve');
 
 const loadURL = serve({ directory: 'dist' });
+
+// In main process.
+ipcMain.on('asynchronous-message', (event, arg) => {
+	console.log(arg) // prints "ping"
+	event.reply('asynchronous-reply', 'pong')
+  })
+  
+ipcMain.on('synchronous-message', (event, arg) => {
+	console.log(arg) // prints "ping"
+	event.returnValue = 'pong'
+})
 
 let mainWindow;
 
