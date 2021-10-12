@@ -19,7 +19,7 @@
   "author": "benitogf",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^10.4.7",
+    "electron": "^11.5.0",
     "electron-packager": "^15.2.0",
     "electron-serve": "^1.1.0"
   }
